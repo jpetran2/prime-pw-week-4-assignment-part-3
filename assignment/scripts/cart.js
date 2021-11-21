@@ -11,6 +11,11 @@ function addItem(item,basket) {
 } //end addItem
 
 function listItems(basket) {
+    const length = basket.length;
+    if (length === 0) {
+        console.log(`Your basket is empty!`);
+        return
+    }
     console.log(' ');
     console.log(`The basket contains:`);
     for (const item of basket) {
@@ -22,13 +27,20 @@ function listItems(basket) {
 } //end listItems
 
 function empty(basket) {
-    basket = [];
+    const length = basket.lenth;
+
     return;
 } // end empty
 
+//******************testing and output section******************
 
 let basket = [];
 console.log(`Basket is ${basket}`);
+
+//read empty basket test
+listItems(basket);
+//it works
+
 
 //add one item test
 console.log(`Adding pears! (expect true)`, addItem('pears',basket));
@@ -36,6 +48,7 @@ console.log(`Basket contains ${basket}`);
 //add one item works
 
 //add multiple items test
+console.log('adding peaches & pecans...');
 addItem('peaches', basket);
 addItem('pecans', basket);
 console.log(`Basket contains ${basket}`);
@@ -43,4 +56,9 @@ console.log(`Basket contains ${basket}`);
 
 //read basket test
 listItems(basket);
-//
+//it works
+
+empty(basket);
+console.log(`Basket contains ${basket}`);
+
+listItems(basket);
