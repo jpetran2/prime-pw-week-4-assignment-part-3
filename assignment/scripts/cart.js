@@ -19,3 +19,8 @@ function listItems(basket) {
     }
     return;
 }
+
+function empty(basket) {
+    basket = [];
+    return;
+}
