@@ -64,3 +64,6 @@ console.log(`Basket contains ${basket}`);
 
 listItems(basket);
 //it works, basket is now empty
+
+//stretch goals:
+const maxItems = 5;
