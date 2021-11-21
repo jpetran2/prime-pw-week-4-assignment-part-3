@@ -1,9 +1,6 @@
 console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
-let basket = [];
-
-
 
 
 function addItem(item,basket) {
@@ -18,9 +15,15 @@ function listItems(basket) {
         console.log(item);
     }
     return;
-}
+} //end listItems
 
 function empty(basket) {
     basket = [];
     return;
-}
+} // end empty
+
+
+let basket = [];
+console.log(`Basket is ${basket}`);
+console.log(`Adding pears! (expect true)`, addItem('pears',basket));
+console.log(`Basket contains ${basket}`);
