@@ -4,8 +4,10 @@ console.log('***** Cart Functions *****');
 
 
 function addItem(item,basket) {
-    let length = basket.length;
-    basket.splice(length-1, 0, item); 
+    if (isFull(basket)) {
+        return false;
+    }
+    basket.splice(basket.length-1, 0, item); 
         //inserts item at end of basket[]
     return true;
 } //end addItem
