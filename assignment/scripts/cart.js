@@ -8,13 +8,8 @@ function addItem(item,basket) {
     if (isFull(basket)) { //implements 5 item limit
         return false;
     }
-    if (basket.length = 0) {
-        basket.splice(0, 0, item); 
-
-    } else {
-    basket.splice(basket.length-1, 0, item); 
+    basket.splice(basket.length, 0, item); 
         //inserts item at end of basket[]
-    }
     return true;
 } //end addItem
 
