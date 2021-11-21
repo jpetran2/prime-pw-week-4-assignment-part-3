@@ -69,5 +69,10 @@ listItems(basket);
 const maxItems = 5;
 
 function isFull(basket) {
-
+    if (basket.length >= maxItems) {
+        return true;
+    }
+    return false;
 }
+
+//editing addItem now 
