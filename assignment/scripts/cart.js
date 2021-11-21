@@ -45,6 +45,12 @@ function isFull(basket) {
     return false;
 } //end isFull
 
+function removeItem() {
+
+
+}
+
+
 //******************testing and output section******************
 
 let basket = [];
