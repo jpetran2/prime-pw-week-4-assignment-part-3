@@ -58,7 +58,9 @@ console.log(`Basket contains ${basket}`);
 listItems(basket);
 //it works
 
+//test empty basket function
 empty(basket);
 console.log(`Basket contains ${basket}`);
 
 listItems(basket);
+//it works, basket is now empty
