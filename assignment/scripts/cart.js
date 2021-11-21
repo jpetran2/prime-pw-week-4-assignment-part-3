@@ -27,7 +27,7 @@ function listItems(basket) {
 } //end listItems
 
 function empty(basket) {
-    const length = basket.lenth;
+    const length = basket.length;
 
     return;
 } // end empty
