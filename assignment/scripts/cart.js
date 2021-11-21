@@ -11,12 +11,13 @@ function addItem(item,basket) {
 } //end addItem
 
 function listItems(basket) {
+    console.log(' ');
     console.log(`The basket contains:`);
     for (const item of basket) {
         console.log(item);
     }
     console.log(`and that's it!`);
-    console.log('');
+    console.log(' ');
     return;
 } //end listItems
 
