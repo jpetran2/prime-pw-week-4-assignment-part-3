@@ -66,7 +66,7 @@ listItems(basket);
 //it works, basket is now empty
 
 //stretch goals:
-global const maxItems = 5;
+const maxItems = 5;
 
 function isFull(basket) {
 
