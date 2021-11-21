@@ -24,7 +24,6 @@ function listItems(basket) {
     for (const item of basket) {
         console.log(item);
     }
-    console.log(`and that's it!`);
     console.log(' ');
     return;
 } //end listItems
@@ -45,9 +44,14 @@ function isFull(basket) {
     return false;
 } //end isFull
 
-function removeItem() {
-
-
+function removeItem(item, array) {
+    let removeIndex = array.indexOf(item)
+    if (removeIndex === -1) {
+        return false;
+    } else {
+        array.splice(removeIndex,1);
+        return true;
+    }
 }
 
 
@@ -94,4 +98,12 @@ console.log(`adding to basket...should be true: `, addItem('food4',basket2));
 console.log(`adding to basket...should be true: `, addItem('food5',basket2));
 console.log(`adding to basket...should be false: `, addItem('food6',basket2));
 
+listItems(basket2);
+
+//remove item 'food3' test
+console.log('removing food3 from basket2...should be true', removeItem('food3',basket2));
+listItems(basket2);
+
+//remove item 'food6' test
+console.log('removing food6 from basket2...should be false', removeItem('food6',basket2));
 listItems(basket2);
