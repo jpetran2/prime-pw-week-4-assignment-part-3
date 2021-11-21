@@ -1,14 +1,20 @@
 console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
+const maxItems = 5;
 
 
 function addItem(item,basket) {
-    if (isFull(basket)) {
+    if (isFull(basket)) { //implements 5 item limit
         return false;
     }
+    if (basket.length = 0) {
+        basket.splice(0, 0, item); 
+
+    } else {
     basket.splice(basket.length-1, 0, item); 
         //inserts item at end of basket[]
+    }
     return true;
 } //end addItem
 
@@ -33,6 +39,16 @@ function empty(basket) {
     basket.splice(0,length);
     return;
 } // end empty
+
+
+//stretch goals:
+
+function isFull(basket) {
+    if (basket.length >= maxItems) {
+        return true;
+    }
+    return false;
+} //end isFull
 
 //******************testing and output section******************
 
@@ -67,14 +83,14 @@ console.log(`Basket contains ${basket}`);
 listItems(basket);
 //it works, basket is now empty
 
-//stretch goals:
-const maxItems = 5;
 
-function isFull(basket) {
-    if (basket.length >= maxItems) {
-        return true;
-    }
-    return false;
-}
+//maxItems test
+let basket2 = [];
+console.log(`adding to basket...should be true: `, addItem('food1',basket2));
+console.log(`adding to basket...should be true: `, addItem('food2',basket2));
+console.log(`adding to basket...should be true: `, addItem('food3',basket2));
+console.log(`adding to basket...should be true: `, addItem('food4',basket2));
+console.log(`adding to basket...should be true: `, addItem('food5',basket2));
+console.log(`adding to basket...should be false: `, addItem('food6',basket2));
 
-//editing addItem now 
+listItems(basket2);
