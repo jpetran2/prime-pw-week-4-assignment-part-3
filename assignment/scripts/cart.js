@@ -28,7 +28,7 @@ function listItems(basket) {
 
 function empty(basket) {
     const length = basket.length;
-
+    basket.splice(0,length);
     return;
 } // end empty
 
